@@ -36,7 +36,7 @@ public class Animal {
     }
 
     public void fazerSom() {
-        System.out.println("O som é: CORINTHIANNNNNNNNNNNNNNNNNNNNNNNNSSSSSSSS");
+        System.out.println("O som é: ");
     }
 
     public void comer() {
