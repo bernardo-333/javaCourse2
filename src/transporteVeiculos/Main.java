@@ -11,8 +11,10 @@ public class Main {
         veiculos.add(new Onibus("mercedes",4));
 
         for (Veiculos i : veiculos) {
+            Double tempo;
             System.out.println(i);
-            System.out.println(i.calcularTempo(100));
+            tempo = (double) i.calcularTempo(100);
+            i.converter(tempo);
         }
 
 

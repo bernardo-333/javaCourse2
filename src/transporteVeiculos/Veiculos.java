@@ -11,6 +11,11 @@ public class Veiculos {
         return distancia / 100;
     }
 
+    public void converter(double tempo) {
+        int horas = (int) tempo;
+        int minutos = (int) ((tempo - horas)*60);
+        System.out.println("Tempo percorrido é de "+horas+"h "+minutos+"min");
+    }
 
     // @Override
     public String toString() {
