@@ -25,7 +25,8 @@ public class Main {
                 case 1:
                     System.out.println("\n---Cadastrar Usuario---");
                     System.out.println("\nDigite o nome: ");
-                    String nome = sc.next();
+                    sc.nextLine();
+                    String nome = sc.nextLine();
                     System.out.println("Digite o email: ");
                     String email = sc.next();
                     System.out.println("Digite o idade: ");
