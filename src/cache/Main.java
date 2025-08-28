@@ -2,12 +2,13 @@ package cache;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Cadastro> Banco = new ArrayList<>();
-        ArrayList<Cadastro> Cache = new ArrayList<>();
+        List<Cadastro> Banco = new ArrayList<>();
+        List<Cadastro> Cache = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
         //Inicio
@@ -54,36 +55,43 @@ public class Main {
 
                     boolean encontrado = false;
                     while (!encontrado) {
-                        System.out.println();
-                        System.out.println("Qual voce quer acessar? (acesse pelo nome): ");
-                        String nomee = sc.nextLine();
+                        System.out.print("Qual voce quer acessar? (acesse pelo nome): ");
+                        String nomee = sc.next();
 
+                        for (Cadastro d : Cache) {
+                            if (d.getNome().equals(nomee)) {
+                                System.out.println("pessoa encontrada no cache " + d.toString());
+                                encontrado = true;
+                                break;
+                            }
+                        }
+
+                        if (!encontrado) {
                         for (Cadastro c : Banco) {
                             if (c.getNome().equals(nomee)) {
-                                System.out.println(c.toString());
+                                System.out.println("pessoa encontrada no Banco de Dados " + c.toString());
                                 if (Cache.size() >= 10) {
                                     Cache.remove(0);
+                                    break;
                                 }
                                 Cache.add(c);
                                 encontrado = true;
                                 break;
                             }
                         }
+                        }
                         if (!encontrado) {
                             System.out.println("Não encontrado!");
+                            encontrado = true;
+                            break;
                         }
+
                     }
-
-
-
-
-
 
 
             }
 
         }
-
 
 
         //Adicionar cadastro
@@ -92,14 +100,13 @@ public class Main {
         //Puxar informações
 
 
-
 //        while (true) {
 //
 //
 //
 //
 //            //puxar pela segunda vez
-//            boolean encontrado2 = false;
+////            boolean encontrado2 = false;
 //            System.out.println("Qual2: ");
 //            int id = sc.nextInt();
 //
@@ -124,9 +131,6 @@ public class Main {
 //                }
 //            }
 //        }
-
-
-
 
 
     }

@@ -28,8 +28,7 @@
 
         @Override
         public String toString() {
-            return "Cadastro{" +
-                    "id=" + id +
+            return "id=" + id +
                     ", nome='" + nome + '\'' +
                     ", email='" + email + '\'' +
                     ", idade=" + idade +
