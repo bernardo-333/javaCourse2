@@ -67,18 +67,18 @@ public class Main {
                         }
 
                         if (!encontrado) {
-                        for (Cadastro c : Banco) {
-                            if (c.getNome().equals(nomee)) {
-                                System.out.println("pessoa encontrada no Banco de Dados " + c.toString());
-                                if (Cache.size() >= 10) {
-                                    Cache.remove(0);
+                            for (Cadastro c : Banco) {
+                                if (c.getNome().equals(nomee)) {
+                                    System.out.println("pessoa encontrada no Banco de Dados " + c.toString());
+                                    if (Cache.size() >= 10) {
+                                        Cache.remove(0);
+                                        break;
+                                    }
+                                    Cache.add(c);
+                                    encontrado = true;
                                     break;
                                 }
-                                Cache.add(c);
-                                encontrado = true;
-                                break;
                             }
-                        }
                         }
                         if (!encontrado) {
                             System.out.println("Não encontrado!");
@@ -87,53 +87,7 @@ public class Main {
                         }
 
                     }
-
-
             }
-
         }
-
-
-        //Adicionar cadastro
-
-
-        //Puxar informações
-
-
-//        while (true) {
-//
-//
-//
-//
-//            //puxar pela segunda vez
-////            boolean encontrado2 = false;
-//            System.out.println("Qual2: ");
-//            int id = sc.nextInt();
-//
-//            for (Cadastro c : Cache) {
-//                if (c.getId() == id) {
-//                    System.out.println("pessoa encontrada no cache " + c.toString());
-//                    encontrado2 = true;
-//                    break;
-//                }
-//            }
-//
-//            if (!encontrado2) {
-//                System.out.println("Nao encontrado no cache");
-//                for (Cadastro c : Banco) {
-//                    if (c.getId() == id) {
-//                        System.out.println("\nPessoa encontrada no Banco \n" + c.toString());
-//                        if (Cache.size() >= 10) {
-//                            Cache.remove(0);
-//                        }
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-
-
     }
-
-
 }
