@@ -21,7 +21,7 @@ public class Main {
         CP.sacar(10);
         CP.exibirSaldo();
         System.out.println();
-        System.out.println("Conta Pessoa Juraidica:");
+        System.out.println("Conta Pessoa Juridica:");
         PJ.calcularTarifaMensal();
         PJ.exibirSaldo();
         PJ.sacar(10);
